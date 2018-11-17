@@ -94,7 +94,7 @@ internal static class UsbIO
 
     public static void WriteScreen(UsbCtx ctx)
     {
-        using (var initBmp = new Bitmap(ScreenBounds.Width, ScreenBounds.Height, PixelFormat.Format24bppRgb))
+        using (var initBmp  = new Bitmap(ScreenBounds.Width, ScreenBounds.Height, PixelFormat.Format24bppRgb))
         using (var graphics = Graphics.FromImage(initBmp))
         {
             graphics.CopyFromScreen(ScreenBounds.Left, ScreenBounds.Top, 0, 0, initBmp.Size, CopyPixelOperation.SourceCopy);
